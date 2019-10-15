@@ -1,32 +1,51 @@
-a = 2
-print(a)
-print(type(a))
-print(id(a))
+#######################################################################################################
+# String Data Type
+a_str = 'Hello World'
+print(a_str) #output will be whole string. Hello World
+print(a_str[0]) #output will be first character. H
+print(a_str[0:5]) #output will be first five characters. Hello
 
-b = 5642414
-print(b)
-print(type(b))
+#######################################################################################################
 
-c = 5414242141.34
-print(c)
-print(type(c))
+#Set Data Types
+#Sets
+basket = {'Kiran','swathi','acharya'}
+print(basket)
 
-d = 'A'
-print(d)
-print(type(d))
+# Frozen Sets
+bucket =frozenset ('Kiran acharya')
+print(bucket)
+cities = frozenset(["Frankfurt", "Basel","Freiburg"])
+print(cities)
 
-name = 'Acharya'
-print(name)
-print(type(name))
+#######################################################################################################
+#Numbers data type
+int_num = 10 #int value
+float_num = 10.2 #float value
+complex_num = 3.14j #complex value
+long_num = 1234567  #long value
 
-q = True
-print(q)
-print(type(q))
+#######################################################################################################
+#List Data Type
+list = ['kiran','Acharya','swathi','Prabhu']
+print(list)
+print(type(list))
 
-x = None
-print(x)
-print(type(x))
+#######################################################################################################
+#Dictionary Data Type
+my_dic = {"name":"acharya","age":10}
+print(my_dic)
+print(my_dic['name'])
+print(my_dic.keys())
 
-import keyword
+#######################################################################################################
+#Tuple Data Type
+tuple = (123,'hello')
+print(tuple)
 
-print(keyword.kwlist)
+
+
+
+
+
+
