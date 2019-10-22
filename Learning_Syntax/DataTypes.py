@@ -9,7 +9,7 @@ print(a_str[0:5]) #output will be first five characters. Hello
 
 #Set Data Types
 #Sets
-basket = {'Kiran','swathi','acharya'}
+basket = ('Kiran','swathi','acharya')
 print(basket)
 
 # Frozen Sets
