@@ -18,14 +18,28 @@ def solution(X, A):
                 counter += 1
                 try:
                     leaves.remove(frog_step)
+                    leaves.append(A[i])
+                    frog_step += 1
                 except:
                     frog_step += 1
+                    leaves.append(A[i])
                     continue
             else:
                 leaves.append(A[i])
-        else:
-            break
-    return counter
+    if frog_step <= X:
+        for k in range(0, leaves.__len__()):
+            if frog_step in leaves:
+                counter += 1
+                try:
+                    leaves.remove(frog_step)
+                    frog_step += 1
+                except:
+                    frog_step += 1
+                    continue
+    if frog_step < X:
+        return -1
+    else:
+        return counter
 
 
 z = array.array('i', [1, 3, 1, 4, 2, 3, 5, 4])
