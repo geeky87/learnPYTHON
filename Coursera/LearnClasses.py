@@ -1,4 +1,7 @@
 class Point() :
+
+    classvar = '$'
+
     def getX(self):
         return self.x
 
@@ -8,6 +11,18 @@ class Point() :
     def __init__(self,initx,inity):
         self.x = initx
         self.y = inity
+
+    def __str__(self):
+        return 'Point({},{})'.format(self.getX(),self.getY())
+
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
+
+    def __sub__(self, other):
+        return Point(self.x - other.x, self.y - other.y)
+
+    def sort_priority(self):
+        return self.x
 
 
 if __name__ == '__main__':
@@ -22,3 +37,13 @@ if __name__ == '__main__':
 
     print(point1.getX())
     print(point2.getX())
+
+    print(point1)
+    print(point1 + point2)
+    print(point1 - point2)
+
+    pointList = [point1,point2]
+    print(sorted(pointList,key=lambda x: x.sort_priority()))
+
+    print(Point.classvar)
+    print(point1.classvar)
