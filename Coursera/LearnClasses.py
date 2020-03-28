@@ -24,6 +24,9 @@ class Point() :
     def sort_priority(self):
         return self.x
 
+class SmallPoint(Point) :
+
+
 
 if __name__ == '__main__':
     point1 = Point(10,20)
